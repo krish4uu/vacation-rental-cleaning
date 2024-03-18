@@ -14,6 +14,7 @@ export default function Home() {
     try {
       const response = await axios.get('http://localhost:3000/tasks');
       setTasks(response.data);
+      console.table(response.data)
     } catch (error) {
       console.log('Error:', error);
     }
